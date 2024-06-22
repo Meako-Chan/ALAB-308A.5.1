@@ -146,3 +146,5 @@ console.log(new_object);
 let new_object2 = incrementAgeAndCopy(object4);
 console.log(object4);
 console.log(new_object2);
+
+export{sum,average,longest_string,stringsLongerThan,printNumbers};

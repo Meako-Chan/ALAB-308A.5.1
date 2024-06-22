@@ -34,4 +34,6 @@ function isPrime(n){
 
 primeNumbers(10000);
 
+export{isPrime, primeNumbers, appendNum};
+
 
