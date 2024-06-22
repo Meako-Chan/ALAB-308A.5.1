@@ -10,13 +10,9 @@ function appendNum(n){
 function primeNumbers(n){
     for(let i = 0; i <= n; i++){
         if(isPrime(i)){
-            appendNum(i);                              
+            console.log(i);                    
         }
-        
     }
-    setTimeout(function() {
-        alert("The Prime numbers are displayed.");
-    }, 0);  
     
 }
 
@@ -32,8 +28,8 @@ function isPrime(n){
     return true;
 }
 
-primeNumbers(10000);
 
-export{isPrime, primeNumbers, appendNum};
+export{primeNumbers, isPrime};
+
 
 
