@@ -1,43 +1,20 @@
-//Part 1
+//This code imports using ALAB 308A.1.1 and  ALAB 308.5.1.
+//From ALAB 308A.1.1  I imported prime.js to check whether a number is Prime, and to print primeNumbers from 1 to n.
+//From ALAB 308.5.1 Imported Array.js and functions.js for sum of numbers, average, flatten arrays
+import{isPrime, primeNumbers} from './prime.js';
+import{sum,average,longest_string,stringsLongerThan,printNumbers} from './functions.js';
+import{flattenArr} from './Array.js';
 
-let counter = 0;
-// increment(counter);
+let numbers = [8,5,3,5,7];
+let primeNumber = 23;
 
-function increment(counter){
-    try{
-        counter++;
-        increment(counter);
-    } catch( error){
-        console.log(error.message);
-        console.log(counter);
-    }
-    
-}      
+console.log("Check whether 5 is prime: ");
+console.log("--------------------------");
 
-//part 2
-
-let flattenArr = (arr) => {
-    let flat = [];
-    arr.forEach(element => {
-        if(element instanceof Array){
-            flat.push(...flattenArr(element));
-        }else{
-            flat.push(element);
-        }
-    });       
-    return flat;  
-}
-
-const trampoline = (f, ...args) => {
-    let result = f(...args);
-    while (typeof result === "function") {
-      result = result();
-    }
-    return result;
-  }
-
-arr = [1, [2, [3], 4], 5]
-console.log(trampoline(flattenArr, arr));
-
-export{increment, flattenArr};
-
+console.log(isPrime(5));
+//Print Prime numbers up to 23
+primeNumbers(primeNumber);
+console.log(sum(numbers));
+let unflattened_arr = [8, [2,3], [[2,5],6]];
+unflattened_arr = flattenArr(unflattened_arr);
+console.log(unflattened_arr);
